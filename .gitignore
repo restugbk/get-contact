@@ -1,0 +1,26 @@
+# Composer dependencies
+/vendor/
+
+# Composer lock file (optional, kalau library biasanya di-ignore)
+composer.lock
+
+# PHPUnit test results
+.phpunit.result.cache
+coverage.xml
+coverage/
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+.cache/

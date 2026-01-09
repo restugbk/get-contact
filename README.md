@@ -1,0 +1,91 @@
+# GetContact API
+
+[![PHP Version](https://img.shields.io/badge/PHP-%3E%3D7.4-777bb4?logo=php)](https://www.php.net/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/restugbk/qris-interactive)
+
+**[Un-Official]** A lightweight, Un-Official PHP Library for validating phone numbers and retrieving tags from the GetContact API. Designed to be framework-agnostic, efficient, and easy to integrate.
+
+---
+
+## 📦 Installation
+
+Install the package via [Composer](https://getcomposer.org/):
+
+```bash
+composer require restugbk/get-contact
+```
+
+## 1. Basic Initialization
+
+```php
+use Restugbk\GetContact;
+
+$token    = 'YOUR_TOKEN';
+$finalKey = 'YOUR_FINAL_KEY';
+
+$getContact = new GetContact($token, $finalKey);
+```
+
+## 2. Validate and Check Number
+
+```php
+$number = '081234567890';
+
+$response = $getContact->checkNumber($number);
+
+if ($response['success']) {
+    echo "Validated Number: " . $response['number'] . "\n";
+    echo "Tags: " . implode(', ', $response['tags']) . "\n";
+} else {
+    echo "Error: " . $response['message'] . "\n";
+}
+```
+
+## 📋 Data Structure Reference
+
+The `checkNumber()` method returns an array with the following keys:
+
+| Key | Type | Description |
+| :--- | :--- | :--- |
+| `success` | **Boolean** | Indicates whether the request was successful. |
+| `number` | **String** | Normalized phone number (e.g., `+6281234567890`). |
+| `tags` | **Array** | List of tags associated with the number. |
+| `raw` | **Array** | Full raw response from the API (decrypted JSON). |
+
+## 🔑 How to Get Token
+
+**Requirements**: Android with ROOT-rights (or emulator).
+1. Install and login into **GetContact** app.
+2. Open file manager on your phone and navigate to:
+    ```bash
+    /data/data/app.source.getcontact/shared_prefs/GetContactSettingsPref.xml
+    ```
+3. Inside the file, you will find:
+    ```bash
+    YOUR_TOKEN = TOKEN
+    YOUR_FINAL_KEY = FINAL_KEY
+    ```
+
+
+🤝 Contributing
+------------
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+📄 License
+------------
+
+This open-source software is distributed under the MIT License. See LICENSE for more information.
+
+## 🛠 Support
+
+If you found this project helpful, please give it a ⭐ star!
+
+For issues and questions, please create an issue in the GitHub repository.
