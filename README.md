@@ -78,7 +78,7 @@ The `checkNumber()` method returns an array with the following keys:
     ```
 3. Inside the file, you will find:
     ```bash
-    YOUR_TOKEN = TOKEN
+    YOUR_TOKEN = TOKEN / CHAT_TOKEN
     YOUR_FINAL_KEY = FINAL_KEY
     ```
 
