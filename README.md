@@ -27,7 +27,7 @@ $finalKey = 'YOUR_FINAL_KEY';
 $getContact = new GetContact($token, $finalKey);
 ```
 
-## 2. Validate and Check Number
+## 2. Validate Number of Tags
 
 ```php
 $number = '081234567890';
@@ -42,7 +42,7 @@ if ($response['success']) {
 }
 ```
 
-## 3. Validate and Search Number
+## 3. Search Profile by Validated Number
 
 ```php
 $number = '081234567890';
