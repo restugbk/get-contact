@@ -42,6 +42,21 @@ if ($response['success']) {
 }
 ```
 
+## 3. Validate and Search Number
+
+```php
+$number = '081234567890';
+
+$response = $getContact->searchNumber($number);
+
+if ($response['success']) {
+    echo "Validated Number: " . $response['number'] . "\n";
+    echo "Profile: " . implode(', ', $response['profile']) . "\n";
+} else {
+    echo "Error: " . $response['message'] . "\n";
+}
+```
+
 ## 📋 Data Structure Reference
 
 The `checkNumber()` method returns an array with the following keys:
