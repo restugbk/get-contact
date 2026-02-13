@@ -93,7 +93,7 @@ The `checkNumber()` method returns an array with the following keys:
 
 If **TOKEN**, **CHAT_TOKEN**, or **FINAL_KEY** are missing.
 
-Try updating the GetContact app to the latest version and log in with your account. Perform a search to trigger the CAPTCHA. This CAPTCHA cannot be bypassed using this repository due to technical limitations.
+Try updating the **GetContact** app to the latest version and log in with your account. Perform a search to trigger the CAPTCHA. This CAPTCHA cannot be bypassed using this repository due to technical limitations.
 After solving the CAPTCHA and confirming that the account can fetch **Tags**, you can downgrade the app to version **6.0.0**.
 Follow the steps above to resolve the issue.
 
